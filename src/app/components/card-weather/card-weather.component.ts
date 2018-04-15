@@ -55,6 +55,8 @@ export class CardWeatherComponent implements OnInit {
   getWeatherFromCard(){
     this.isLoading = true;
     
+    
+    //includes a setInterval to see the loading
     setInterval(() => {
       
     //check if data exists in cache
@@ -82,7 +84,7 @@ export class CardWeatherComponent implements OnInit {
         }
       );
     }    
-  }, 3000); 
+  }, 1000); 
 
   }
 
