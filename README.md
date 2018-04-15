@@ -17,7 +17,7 @@ WeatherNow is an application designed to display the current temperature of citi
 WeatherNow was made with `Angular 5` using Typescript and was developed based on components, with specific functions, based on the principles Clean Code, SOLID and DRY. Component style was created from CSS3 with SCSS.
 
 
-* `Components`:
+* Components:
 
 `AppComponent` - Responsible for creating the application and displaying the main page - single route created.
 
@@ -27,18 +27,22 @@ WeatherNow was made with `Angular 5` using Typescript and was developed based on
 
 Checks if the application has cached data, and if it does not, check the service every 10 minutes.
 
-* `Services`:
+
+* Services:
+
 `WeatherService` - Responsible for consulting the OpenWeatherMap API and returning Weather models with their respective city.
 
 `CacheService` - Data is being cached in LocalStorage for 10 minutes, from the service CacheService of the ng2-cache package.
 
-* `Models`:
+
+* Models:
 
 `City` - Class that has the data inherent to City.
 
 `Weather` - Class that has Weather data.
 
-* `Pages`:
+
+* Pages:
 
 `Home` - Application main page that builds the cards from a list of options.
 
@@ -81,30 +85,45 @@ You can run tests by running:
 
 To execute the unit tests via [Karma](https://karma-runner.github.io).
 
-The following unit tests were implemented:
+* The following unit tests were implemented:
+
 AppComponent:
-should create the app
-should have as title 'WeatherNow'
+
+    should create the app
+
+    should have as title 'WeatherNow'
 
 CardWeatherComponent:
-should create
-should not display error
-should display error
-should display in blue temperatures equal to or less than 5 degrees
-should display in orange temperatures above 6 degrees and equal to or below 25
-should display in red temperatures above 26 degrees
+
+    should create
+
+    should not display error
+
+    should display error
+
+    should display in blue temperatures equal to or less than 5 degrees
+
+    should display in orange temperatures above 6 degrees and equal to or below 25
+
+    should display in red temperatures above 26 degrees
 
 TopBarComponent:
-should create
-should render the logo
+
+    should create
+
+    should render the logo
 
 HomeComponent:
-should create
-must have a list with options for the cards
+
+    should create
+
+    must have a list with options for the cards
 
 WeatherService:
-getWeatherByCityName()
-should return an Observable<Weather>
+
+    getWeatherByCityName()
+    
+    should return an Observable<Weather>
 
 
 ## Code scaffolding
