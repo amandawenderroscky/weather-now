@@ -80,7 +80,7 @@ Then open the address `http://localhost:4200/` in the browser. The app will auto
 You can run tests by running:
 
 ```
-`ng test`
+ng test
 ```
 
 To execute the unit tests via [Karma](https://karma-runner.github.io).
@@ -122,7 +122,7 @@ HomeComponent:
 WeatherService:
 
     getWeatherByCityName()
-    
+
     should return an Observable<Weather>
 
 
