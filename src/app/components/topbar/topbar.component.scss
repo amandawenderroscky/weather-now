@@ -1,0 +1,20 @@
+@import '../../../styles/variables.scss';
+nav {
+    width: 100%;
+    height: 25px;
+    position: fixed;
+    display: flex;
+    padding: 15px 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: $background-color-card;
+    border-bottom: $border-bottom-nav;
+    -moz-box-shadow: $box-shadow-nav;
+    -webkit-box-shadow: $box-shadow-nav;
+    box-shadow: $box-shadow-nav;
+}
+
+nav img {
+    width: 162px;
+}

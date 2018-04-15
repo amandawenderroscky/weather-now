@@ -1,0 +1,36 @@
+<div class='card-weather' (click)='toggleCardActivation()'>
+
+    <header>
+        <h3> {{ cityName }}, {{ countryName | uppercase }} </h3>
+    </header>
+
+    <div class='loading' *ngIf='isLoading'>
+        <img src="assets/loader.svg" alt="Loading" title="Loading" />
+    </div>
+
+    <div class='error' *ngIf='showErrorMessage'>
+        <h4>Something went wrong</h4>
+        <button (click)="getWeatherFromCard()">Try again</button>
+    </div>
+
+    <div *ngIf='weather && !isLoading && !showErrorMessage'>
+        <h2 [ngClass]='getClassFromTemperature()'>
+            {{ weather.temp }}<small>&deg;</small></h2>
+    </div>
+
+    <footer *ngIf='weather'>
+        <div [ngClass]='!isActive ? "info" : "info-active" ' *ngIf='weather && !isLoading && !showErrorMessage'>
+            <div>
+                <p class='label'>HUMIDITY</p>
+                <span>{{ weather.humidity }}<small>%</small></span>
+            </div>
+            <div>
+                <p class='label'>PRESSURE</p>
+                <span>{{ weather.pressure }}<small>hPa</small></span>
+            </div>
+        </div>
+        <div class='updated-time' *ngIf='updated_time'>
+            <p>Updated at {{ updated_time | date:'hh:mm:ss a' }}</p>
+        </div>
+    </footer>
+</div>

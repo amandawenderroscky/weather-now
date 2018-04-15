@@ -1,0 +1,116 @@
+@import '../../../styles/variables.scss';
+.card-weather {
+    border-radius: 5px;
+    box-shadow: $box-shadow-card;
+    -webkit-box-shadow: $box-shadow-card;
+    -moz-box-shadow: $box-shadow-card;
+    background-color: $background-color-card;
+    width: 250px;
+    margin: 0 25px;
+    text-align: center;
+    cursor: pointer;
+     :hover .info {
+        height: 45px;
+        transition-delay: 0.2s;
+    }
+    h2 {
+        font-size: 5.5rem;
+        padding: 20px 0px;
+        font-weight: normal;
+        small {
+            font-size: 3rem;
+            vertical-align: super;
+        }
+    }
+    h3 {
+        color: $color-gray;
+        font-size: 18px;
+        line-height: 15px;
+        font-weight: normal;
+    }
+    .loading {
+        padding: 65px 0;
+        img {
+            width: 46px;
+            height: 46px;
+        }
+    }
+    .error {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+    }
+    .error h4 {
+        color: $color-error;
+        font-weight: normal;
+        margin: 0;
+    }
+    .error button {
+        color: $color-gray;
+        border: 2px solid $color-gray;
+        border-radius: 30px;
+        background-color: $background-color-card;
+        padding: 10px 15px;
+        font-size: 1em;
+        margin-top: 20px;
+        outline: none;
+    }
+    .error button:hover {
+        cursor: pointer;
+        background-color: $background-color;
+        transition: background-color 0.3;
+    }
+    header {
+        padding: 15px 0;
+        border-bottom: 1px solid $color-divider;
+    }
+    footer {
+        padding: 15px 30px;
+        background-color: $background-color-opacity;
+        color: $color-gray;
+        .updated-time {
+            p {
+                font-size: 0.6em;
+                color: $color-gray-light;
+            }
+        }
+        .info {
+            height: 0;
+        }
+        .info-active {
+            height: 45px;
+            transition-delay: 0.2s;
+        }
+        .info,
+        .info-active {
+            display: flex;
+            overflow: hidden;
+            justify-content: space-between;
+            transition: 0.4s all;
+            .label {
+                font-size: 12px;
+                color: $color-gray-light;
+                margin-bottom: 5px;
+            }
+            span {
+                font-weight: bold;
+                font-size: 16px;
+            }
+            small {
+                font-size: 12px;
+                font-weight: normal;
+            }
+        }
+    }
+    .high {
+        color: $color-high;
+    }
+    .medium {
+        color: $color-medium;
+    }
+    .low {
+        color: $color-low;
+    }
+}
