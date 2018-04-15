@@ -52,6 +52,10 @@ Checks if the application has cached data, and if it does not, check the service
 
 ### Getting Started
 
+* Prerequisites:
+
+This project have dependencies that require Node 6.9.0 or higher, together with NPM 3 or higher.
+
 Prepare the development enviroment by running:
 
 ```
