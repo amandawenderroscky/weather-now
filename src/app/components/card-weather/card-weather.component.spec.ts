@@ -16,6 +16,10 @@ describe('CardWeatherComponent', () => {
   let originalTimeout;
 
   beforeEach(async(() => {
+
+    originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+    jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+
     TestBed.configureTestingModule({
       declarations: [ CardWeatherComponent ],
       imports: [HttpModule],
@@ -28,11 +32,8 @@ describe('CardWeatherComponent', () => {
   }));
 
   beforeEach(() => {
-    originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
 
     fixture = TestBed.createComponent(CardWeatherComponent);
-    
     component = fixture.componentInstance;
     component.cityName = cardOptionCorrect.cityName;
     component.isActive = cardOptionCorrect.isActive;

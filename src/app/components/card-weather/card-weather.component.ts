@@ -56,8 +56,8 @@ export class CardWeatherComponent implements OnInit {
     this.isLoading = true;
     
     
-    //includes a setInterval to see the loading
-    setInterval(() => {
+    //includes a setTimeout to see the loading
+    setTimeout(() => {
       
     //check if data exists in cache
     let exists: boolean = this._cacheService.exists(this.cityNameComplete);
@@ -84,7 +84,7 @@ export class CardWeatherComponent implements OnInit {
         }
       );
     }    
-  }, 1000); 
+    }, 1000); 
 
   }
 
