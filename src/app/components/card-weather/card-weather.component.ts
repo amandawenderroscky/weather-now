@@ -23,7 +23,7 @@ export class CardWeatherComponent implements OnInit {
   public weather: Weather;
   public showErrorMessage: boolean = false;
   public isLoading: boolean = false;
-  public updated_time: any = Date.now;
+  public updated_time: any;
   public intervalSubscription: Subscription;
   public cacheExpirationTimeInMinutes: number = 10;
   public intervalTimeInMinutes: number = 10;
@@ -58,6 +58,8 @@ export class CardWeatherComponent implements OnInit {
     
     //includes a setTimeout to see the loading
     setTimeout(() => {
+
+    this.updated_time = Date.now();
       
     //check if data exists in cache
     let exists: boolean = this._cacheService.exists(this.cityNameComplete);
